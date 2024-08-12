@@ -1,0 +1,62 @@
+# app配置
+app:
+  name: gin-plus # 项目(服务)名称
+  mode: debug # debug:开发环境 test:测试环境 release:线上环境
+  host: https://www.baosloan.com
+  version: v0.0.1
+
+# server配置
+server:
+  port: 8080
+  readTimeout: 20
+  writeTimeout: 20
+
+# jwt配置
+jwt:
+  secret: kX4MBsaN9vretEwANFvRf4uQwszOc3Pl # token 密钥，生产环境时及的修改
+  tokenExpired: 3600 # token有效期 单位: 秒(s)
+
+# mysql配置
+mysql:
+  host: 172.16.114.128
+  port: 3306
+  database: blog
+  username: root
+  password: root
+  tablePrefix: blog_
+  singularTable: true
+  charset: utf8mb4
+
+# redis配置
+redis:
+  host: 172.16.114.128
+  port: 6379
+  password: ""
+  db: 0
+  poolSize: 100
+
+# log配置
+log:
+  filename: app # 日志文件名称
+  ext: .log # 日志文件后缀
+  level: debug
+  maxSize: 200 # 单位(兆:M)
+  maxAge: 30 # 单位(天)
+  maxBackups: 7 # 日志文件备份数量
+  savePath: storage/logs/ # 存储路径
+
+# kafka配置
+kafka:
+  host: 172.16.114.128
+  port: 9092
+  group: gin-plus
+
+# rabbitMQ配置
+rabbitmq:
+  host: 172.16.114.128
+  port: 5672
+  username: root
+  password: root
+
+
+
