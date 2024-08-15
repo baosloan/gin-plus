@@ -62,6 +62,11 @@ type App struct {
 	Version string `mapstructure:"version"`
 }
 
+const (
+	ModeDebug = "debug"
+	ModeProd  = "prod"
+)
+
 type Server struct {
 	Port         int           `mapstructure:"port"`
 	ReadTimeout  time.Duration `mapstructure:"readTimeout"`
@@ -99,7 +104,7 @@ type Log struct {
 	MaxSize    int    `mapstructure:"maxSize"`
 	MaxAge     int    `mapstructure:"maxAge"`
 	MaxBackups int    `mapstructure:"maxBackups"`
-	SavePath   string `mapstructure:"savePath"`
+	SaveDir    string `mapstructure:"saveDir"`
 }
 
 type Kafka struct {

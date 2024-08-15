@@ -43,7 +43,7 @@ log:
   maxSize: 200 # 单位(兆:M)
   maxAge: 30 # 单位(天)
   maxBackups: 7 # 日志文件备份数量
-  savePath: storage/logs/ # 存储路径
+  saveDir: storage/logs/ # 存储路径
 
 # kafka配置
 kafka:

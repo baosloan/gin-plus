@@ -14,8 +14,6 @@ type Claims struct {
 	jwt.RegisteredClaims
 }
 
-const SECRET = "kX4MBsaN9vretEwANFvRf4uQwszOc3Pl"
-
 // Sign 签名生成token
 func Sign(userId uint, expiredTime time.Duration) (string, error) {
 	claims := Claims{
